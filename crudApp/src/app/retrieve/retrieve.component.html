@@ -1,0 +1,35 @@
+<div>
+    <h2>Products List api.2.0</h2>
+    <table border="2">
+        <thead>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.qty}}</td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div>
+    <h3>Search a Product By Id</h3>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="">Product Id </label>
+        <input type="text" class="form-control" id="productId"
+        [(ngModel)]="productId" name="productId">
+    </div>
+    <button class="btn btn-success" type="submit">search</button>
+</form>
+    
+</div>
+<hr>
+
+

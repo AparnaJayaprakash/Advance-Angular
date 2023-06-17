@@ -1,0 +1,5 @@
+<div class="comp">
+    <h3>Parent Component</h3>
+    <p>Message from child: {{recievedMessage}}</p>
+    <app-child [message]="parentMessage" (recieveMessage)="recieveMessage($event)"></app-child>
+</div>

@@ -1,0 +1,50 @@
+<br>
+<style>
+    table, th, td {
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+    th, td {
+      background-color: #ccaad6;
+    }
+    </style>
+<div>
+    <h4><b>Products List</b></h4>
+    <table border="2">
+        <thead>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.qty}}</td>
+            <td><button class="btn btn-warning"><a [routerLink]="'/update/' + product.productId">Update</a></button></td>
+            <td><button *ngIf="product.productId !== undefined" (click)="deleteProduct(product.productId)" class="btn btn-danger" >Delete</button></td>
+        </tr>
+    </table>
+</div>
+
+<!-- <div>
+    <h3>Search a Product By Id</h3>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="">Product Id </label>
+        <input type="text" class="form-control" id="productId"
+        [(ngModel)]="productId" name="productId">
+    </div>
+    <button class="btn btn-success" type="submit">search</button>
+</form>
+    
+</div> -->
+
+
+
+

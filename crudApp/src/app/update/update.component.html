@@ -1,0 +1,72 @@
+<!-- <div>
+    <h2>Update Product</h2>
+    <form (submit)="retrieveProductId()">
+        <label for="idInput">Product Id:</label>
+        <input type="number" id="idInput" [(ngModel)]="productId" name="productId" required>
+        <button type="submit">Retrieve</button>
+    </form>
+
+
+<div>
+    <h2>Retrieved Product</h2>
+    <form (ngSubmit)="updatedProduct()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description">
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+      </div>
+      <div class="form-group">
+        <label for="qty">Quantity:</label>
+        <input type="number" class="form-control" id="qty" [(ngModel)]="product.qty" name="qty">
+      </div>
+      <button class="btn btn-success" type="submit">Update</button>
+    </form>
+  </div>
+</div> -->
+
+<div>
+<h3>Update Product</h3>
+    <form (submit)="retrieveProductId()">
+        <label for="idInput">Product Id:</label>
+        <input type="number" id="idInput" [(ngModel)]="productId" name="productId" required>
+        <button type="submit">Retrieve</button>
+    </form>
+
+<h3>Update a Product</h3>
+<form (ngSubmit)="updatedProduct()">
+  <div class="form-group">
+      <label for="">productId</label>
+      <input type="number" class="form-control" id="productId"
+      [(ngModel)]="product.productId" name ="productId">
+  </div>
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" class="form-control" id="name"
+    [(ngModel)]="product.name" name ="name">
+</div>
+<div class="form-group">
+  <label for="">Description</label>
+  <input type="text" class="form-control" id="description"
+  [(ngModel)]="product.description" name ="description">
+</div>
+<div class="form-group">
+  <label for="">Price</label>
+  <input type="number" class="form-control" id="price"
+  [(ngModel)]="product.price" name ="price">
+</div>
+<div class="form-group">
+  <label for="">Quantity</label>
+  <input type="number" class="form-control" id="qty"
+  [(ngModel)]="product.qty" name ="qty">
+</div>
+<button class="btn btn-success" type="submit">Update</button>
+</form>
+</div>
+<hr>

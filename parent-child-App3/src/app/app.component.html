@@ -1,0 +1,5 @@
+<div class="comp">
+  <h2>Parent Component</h2>
+  <p>Message from Child: {{rcvdMsg}} </p>
+  <button (click)="parent()">Send to Child</button>
+  <app-child  [msg]="parentMsg" (rcvMsg)="rcvMsg($event)"></app-child>
